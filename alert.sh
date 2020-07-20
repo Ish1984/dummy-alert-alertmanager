@@ -15,12 +15,12 @@ curl -XPOST $url -d "[{
 	\"status\": \"firing\",
 	\"labels\": {
 		\"alertname\": \"$name\",
-		\"service\": \”dummy-service\",
+		\"service\": \"dummy-service\",
 		\"severity\":\"warning\",
 		\"instance\": \"$name.example.net\"
 	},
 	\"annotations\": {
-		\"summary\": \”This is a Dummy Alert . Please Ignore!\”
+		\"summary\": \"This is a Dummy Alert . Please Ignore!\"
 	},
 	\"generatorURL\": \"http://prometheus.int.example.net/<generating_expression>\"
 }]"
@@ -41,7 +41,7 @@ curl -XPOST $url -d "[{
 		\"instance\": \"$name.example.net\"
 	},
 	\"annotations\": {
-		\"summary\": \”Resolved: This is a Dummy Alert . Please Ignore!\”
+		\"summary\": \"Resolved: This is a Dummy Alert . Please Ignore!\"
 	},
 	\"generatorURL\": \"http://prometheus.int.example.net/<generating_expression>\"
 }]"
