@@ -11,7 +11,7 @@ url='http://http://127.0.0.1:9093/api/v1/alerts'
 echo "Firing up alert 23071984” 
 
 # change url o
-curl -XPOST $url -d "[{ 
+curl -XPOST $url -d '[{ 
 	\"status\": \"firing\",
 	\"labels\": {
 		\"alertname\": \"$name\",
@@ -23,7 +23,7 @@ curl -XPOST $url -d "[{
 		\"summary\": \"This is a Dummy Alert . Please Ignore!\"
 	},
 	\"generatorURL\": \"http://prometheus.int.example.net/<generating_expression>\"
-}]"
+}]'
 
 echo ""
 
@@ -32,7 +32,7 @@ sleep 5
 echo "Sending Resolved for the alert now .."
 
 echo "sending resolve"
-curl -XPOST $url -d "[{ 
+curl -XPOST $url -d '[{ 
 	\"status\": \"resolved\",
 	\"labels\": {
 		\"alertname\": \"$name\",
@@ -44,5 +44,5 @@ curl -XPOST $url -d "[{
 		\"summary\": \"Resolved: This is a Dummy Alert . Please Ignore!\"
 	},
 	\"generatorURL\": \"http://prometheus.int.example.net/<generating_expression>\"
-}]"
+}]'
 echo ""
